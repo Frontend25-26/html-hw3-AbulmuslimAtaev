@@ -1,1 +1,1 @@
-export const REPO_NAME = 'html-hw3-AbulmuslimAtaev'
+export const REPO_NAME = '/html-hw3-AbulmuslimAtaev'
