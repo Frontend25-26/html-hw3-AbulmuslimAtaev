@@ -7,8 +7,161 @@
     <title>HW3</title>
 </head>
 <body>
-    <div id="app">
-        
-    </div>
+    <main class="page">
+        <section class="quiz" aria-labelledby="quiz-title">
+            <h1 id="quiz-title">UFC квиз</h1>
+
+            <form class="quiz__form" aria-describedby="quiz-note">
+                <section class="question" id="question-1">
+                    <h2 class="question__title">1. Кто стал первым чемпионом UFC, удерживавшим два пояса одновременно?</h2>
+                    <div class="question__options">
+                        <label class="answer">
+                            <input type="radio" name="q1" value="couture">
+                            <span>Рэнди Кутюр</span>
+                        </label>
+                        <label class="answer answer--correct">
+                            <input type="radio" name="q1" value="mcgregor" data-correct>
+                            <span>Конор Макгрегор</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q1" value="gsp">
+                            <span>Жорж Сен-Пьер</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q1" value="cormier">
+                            <span>Дэниел Кормье</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question" id="question-2">
+                    <h2 class="question__title">2. Какой турнир остается самым продаваемым PPV в истории UFC?</h2>
+                    <div class="question__options">
+                        <label class="answer">
+                            <input type="radio" name="q2" value="196">
+                            <span>UFC 196: Макгрегор — Диаз</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q2" value="207">
+                            <span>UFC 207: Нуньес — Роузи</span>
+                        </label>
+                        <label class="answer answer--correct">
+                            <input type="radio" name="q2" value="229" data-correct>
+                            <span>UFC 229: Нурмагомедов — Макгрегор</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q2" value="205">
+                            <span>UFC 205: Нью-Йорк</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question" id="question-3">
+                    <h2 class="question__title">3. В каком раунде Хабиб выиграл у Конора удушающим приемом?</h2>
+                    <div class="question__options">
+                        <label class="answer">
+                            <input type="radio" name="q3" value="round1">
+                            <span>В первом</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q3" value="round2">
+                            <span>Во втором</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q3" value="round3">
+                            <span>В третьем</span>
+                        </label>
+                        <label class="answer answer--correct">
+                            <input type="radio" name="q3" value="round4" data-correct>
+                            <span>В четвертом</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question question--multi" id="question-4" data-type="multi">
+                    <h2 class="question__title">4. Кто бился за пояс BMF на UFC 244? Отметь обоих.</h2>
+                    <div class="question__options">
+                        <label class="answer answer--correct">
+                            <input type="checkbox" name="q4" id="q4-masvidal" value="masvidal" data-correct>
+                            <span>Хорхе Масвидал</span>
+                        </label>
+                        <label class="answer answer--correct">
+                            <input type="checkbox" name="q4" id="q4-diaz" value="diaz" data-correct>
+                            <span>Нейт Диаз</span>
+                        </label>
+                        <label class="answer">
+                            <input type="checkbox" name="q4" value="covington">
+                            <span>Колби Ковингтон</span>
+                        </label>
+                        <label class="answer">
+                            <input type="checkbox" name="q4" value="poirier">
+                            <span>Дастин Порье</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question" id="question-5">
+                    <h2 class="question__title">5. Кто оформил самый быстрый нокаут в UFC (5 секунд)?</h2>
+                    <div class="question__options">
+                        <label class="answer answer--correct">
+                            <input type="radio" name="q5" value="masvidal" data-correct>
+                            <span>Хорхе Масвидал</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q5" value="ngannou">
+                            <span>Франсис Нганну</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q5" value="lewis">
+                            <span>Деррик Льюис</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q5" value="holm">
+                            <span>Холли Холм</span>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="question" id="question-6">
+                    <h2 class="question__title">6. Кто был дисквалифицирован за запрещенное колено в 2021-м?</h2>
+                    <div class="question__options">
+                        <label class="answer">
+                            <input type="radio" name="q6" value="sterling">
+                            <span>Алджамейн Стерлинг</span>
+                        </label>
+                        <label class="answer answer--correct">
+                            <input type="radio" name="q6" value="yan" data-correct>
+                            <span>Петр Ян</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q6" value="reeves">
+                            <span>Джим Миллер</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q6" value="walker">
+                            <span>Джонни Уокер</span>
+                        </label>
+                    </div>
+                </section>
+            </form>
+
+            <p class="quiz__note" id="quiz-note">Все вопросы должны быть отмечены, чтобы включить проверку.</p>
+
+            <input type="checkbox" id="show-results" class="quiz__toggle" hidden>
+            <label for="show-results" class="quiz__button">
+                <span class="quiz__button-text quiz__button-text--show">Показать результаты</span>
+                <span class="quiz__button-text quiz__button-text--hide">Спрятать результаты</span>
+            </label>
+
+            <div class="quiz__results" aria-live="polite">
+                <p class="quiz__score">
+                    Счет: <span class="quiz__score-value" aria-label="Количество правильных ответов"></span>
+                </p>
+                <p class="quiz__feedback">
+                    Верные ответы подсвечены зеленым, ошибки — красным.
+                </p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
