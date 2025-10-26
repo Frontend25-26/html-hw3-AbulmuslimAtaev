@@ -148,7 +148,6 @@ body {
 
 .quiz__score-value::after {
     content: counter(score) " из 6";
-    font-variant-numeric: tabular-nums;
 }
 
 .quiz:has(#show-results:checked) .quiz__button-text--show {
