@@ -1,6 +1,199 @@
+:root {
+    --page-bg: #0f1115;
+    --card-bg: #1a1d23;
+    --border: #2b2f36;
+    --border-strong: #3f4652;
+    --text: #f0f3f9;
+    --muted: #c2c7d0;
+    --accent: #d75134;
+    --active: #4aa8ff;
+    --active-soft: rgba(74, 168, 255, 0.24);
+    --correct: #2cb46d;
+    --correct-soft: rgba(44, 180, 109, 0.2);
+    --wrong: #e15353;
+    --wrong-soft: rgba(225, 83, 83, 0.2);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
 body {
     margin: 0;
-    padding: 0;
+    min-height: 100vh;
+    color: var(--text);
+    background: var(--page-bg);
+}
 
-    background: #292929;
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px 48px;
+}
+
+.quiz {
+    counter-reset: score;
+    width: min(640px, 100%);
+    display: grid;
+    gap: 18px;
+    padding: 28px 24px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+#quiz-title {
+    margin: 0;
+    font-size: clamp(24px, 4vw, 32px);
+}
+
+.quiz__intro,
+.quiz__note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.quiz__form {
+    display: grid;
+    gap: 16px;
+}
+
+.question {
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 20px 18px;
+    display: grid;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.question__title {
+    margin: 0 0 8px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.question__options {
+    display: grid;
+    gap: 8px;
+}
+
+.answer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+}
+
+.answer input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.answer:has(input:checked) {
+    border-color: var(--active);
+    background: var(--active-soft);
+}
+
+.answer:hover {
+    border-color: rgba(255, 255, 255, 0.85);
+}
+
+.answer:has(input:focus-visible) {
+    outline: 2px solid var(--active);
+    outline-offset: 2px;
+}
+
+.quiz__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    color: var(--text);
+    background: var(--accent);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.quiz__button-text--hide {
+    display: none;
+}
+
+.quiz__results {
+    display: none;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border-strong);
+    background: rgba(255, 255, 255, 0.06);
+    gap: 8px;
+}
+
+.quiz__results p {
+    margin: 0;
+}
+
+.quiz__score {
+    font-weight: 600;
+}
+
+.quiz__score-value::after {
+    content: counter(score) " из 6";
+}
+
+.quiz:has(#show-results:checked) .quiz__button-text--show {
+    display: none;
+}
+
+.quiz:has(#show-results:checked) .quiz__button-text--hide {
+    display: inline;
+}
+
+.quiz:has(#show-results:checked) .quiz__results {
+    display: grid;
+}
+
+.quiz:has(#show-results:checked) .quiz__button {
+    background: transparent;
+    border-color: var(--border-strong);
+    box-shadow: none;
+}
+
+.quiz:has(.question:not(:has(input:checked))) .quiz__button,
+.quiz:has(.question:not(:has(input:checked))) .quiz__button:hover {
+    opacity: 0.6;
+    box-shadow: none;
+    transform: none;
+}
+
+.quiz:has(#show-results:checked) .answer--correct {
+    border-color: rgba(44, 180, 109, 0.5);
+}
+
+.quiz:has(#show-results:checked) .answer--correct:has(input:checked) {
+    border-color: var(--correct);
+    background: var(--correct-soft);
+}
+
+.quiz:has(#show-results:checked) .answer:not(.answer--correct):has(input:checked) {
+    border-color: var(--wrong);
+    background: var(--wrong-soft);
+}
+
+.quiz:has(#show-results:checked) .question:has(input[data-correct]:checked) {
+    border-color: var(--correct);
+    counter-increment: score;
+}
+
+.quiz:has(#show-results:checked) .question:has(input:checked):not(:has(input[data-correct]:checked)) {
+    border-color: var(--wrong);
 }
