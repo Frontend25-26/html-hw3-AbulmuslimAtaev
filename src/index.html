@@ -9,137 +9,137 @@
 <body>
     <main class="page">
         <section class="quiz" aria-labelledby="quiz-title">
-            <h1 id="quiz-title">UFC квиз</h1>
+            <h1 id="quiz-title">HTML & CSS квиз</h1>
 
             <form class="quiz__form" aria-describedby="quiz-note">
                 <section class="question" id="question-1">
-                    <h2 class="question__title">1. Кто стал первым чемпионом UFC, удерживавшим два пояса одновременно?</h2>
+                    <h2 class="question__title">1. Какую задачу решает атрибут class в HTML?</h2>
                     <div class="question__options">
                         <label class="answer">
-                            <input type="radio" name="q1" value="couture">
-                            <span>Рэнди Кутюр</span>
+                            <input type="radio" name="q1" value="validate">
+                            <span>Указывает, что тег должен пройти валидацию</span>
                         </label>
                         <label class="answer answer--correct">
-                            <input type="radio" name="q1" value="mcgregor" data-correct>
-                            <span>Конор Макгрегор</span>
+                            <input type="radio" name="q1" value="style-hook" data-correct>
+                            <span>Задает имя, по которому к элементу можно применить общие стили</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q1" value="gsp">
-                            <span>Жорж Сен-Пьер</span>
+                            <input type="radio" name="q1" value="unique">
+                            <span>Гарантирует, что элемент будет единственным на странице</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q1" value="cormier">
-                            <span>Дэниел Кормье</span>
+                            <input type="radio" name="q1" value="script">
+                            <span>Запускает встроенный скрипт без JavaScript</span>
                         </label>
                     </div>
                 </section>
 
                 <section class="question" id="question-2">
-                    <h2 class="question__title">2. Какой турнир остается самым продаваемым PPV в истории UFC?</h2>
+                    <h2 class="question__title">2. Какой CSS-селектор выбирает все элементы на странице?</h2>
                     <div class="question__options">
                         <label class="answer">
-                            <input type="radio" name="q2" value="196">
-                            <span>UFC 196: Макгрегор — Диаз</span>
+                            <input type="radio" name="q2" value="id">
+                            <span>#header</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q2" value="207">
-                            <span>UFC 207: Нуньес — Роузи</span>
+                            <input type="radio" name="q2" value="class">
+                            <span>.item</span>
                         </label>
                         <label class="answer answer--correct">
-                            <input type="radio" name="q2" value="229" data-correct>
-                            <span>UFC 229: Нурмагомедов — Макгрегор</span>
+                            <input type="radio" name="q2" value="universal" data-correct>
+                            <span>*</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q2" value="205">
-                            <span>UFC 205: Нью-Йорк</span>
+                            <input type="radio" name="q2" value="child">
+                            <span>div &gt; p</span>
                         </label>
                     </div>
                 </section>
 
                 <section class="question" id="question-3">
-                    <h2 class="question__title">3. В каком раунде Хабиб выиграл у Конора удушающим приемом?</h2>
+                    <h2 class="question__title">3. Что делает атрибут id в HTML?</h2>
                     <div class="question__options">
                         <label class="answer">
-                            <input type="radio" name="q3" value="round1">
-                            <span>В первом</span>
+                            <input type="radio" name="q3" value="repeat">
+                            <span>Позволяет элементу повторяться в списке</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q3" value="round2">
-                            <span>Во втором</span>
+                            <input type="radio" name="q3" value="class-alt">
+                            <span>Работает как аналог class и задает группу элементов</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q3" value="round3">
-                            <span>В третьем</span>
+                            <input type="radio" name="q3" value="anchor">
+                            <span>Делает элемент ссылкой на внешнюю страницу</span>
                         </label>
                         <label class="answer answer--correct">
-                            <input type="radio" name="q3" value="round4" data-correct>
-                            <span>В четвертом</span>
+                            <input type="radio" name="q3" value="unique" data-correct>
+                            <span>Присваивает уникальный идентификатор, чтобы ссылаться на элемент точечно</span>
                         </label>
                     </div>
                 </section>
 
-                <section class="question question--multi" id="question-4" data-type="multi">
-                    <h2 class="question__title">4. Кто бился за пояс BMF на UFC 244? Отметь обоих.</h2>
+                <section class="question" id="question-4">
+                    <h2 class="question__title">4. Что такое margin в CSS?</h2>
                     <div class="question__options">
                         <label class="answer answer--correct">
-                            <input type="checkbox" name="q4" id="q4-masvidal" value="masvidal" data-correct>
-                            <span>Хорхе Масвидал</span>
-                        </label>
-                        <label class="answer answer--correct">
-                            <input type="checkbox" name="q4" id="q4-diaz" value="diaz" data-correct>
-                            <span>Нейт Диаз</span>
+                            <input type="radio" name="q4" value="outer-gap" data-correct>
+                            <span>Внешний отступ вокруг элемента, разделяющий его с соседями</span>
                         </label>
                         <label class="answer">
-                            <input type="checkbox" name="q4" value="covington">
-                            <span>Колби Ковингтон</span>
+                            <input type="radio" name="q4" value="padding">
+                            <span>Внутренний отступ между контентом и границами элемента</span>
                         </label>
                         <label class="answer">
-                            <input type="checkbox" name="q4" value="poirier">
-                            <span>Дастин Порье</span>
+                            <input type="radio" name="q4" value="border">
+                            <span>Толщина рамки элемента</span>
+                        </label>
+                        <label class="answer">
+                            <input type="radio" name="q4" value="column-gap">
+                            <span>Расстояние между колонками в flex-контейнере</span>
                         </label>
                     </div>
                 </section>
 
                 <section class="question" id="question-5">
-                    <h2 class="question__title">5. Кто оформил самый быстрый нокаут в UFC (5 секунд)?</h2>
+                    <h2 class="question__title">5. Какой современный CSS-аналог можно использовать вместо устаревшего тега &lt;font&gt;?</h2>
                     <div class="question__options">
                         <label class="answer answer--correct">
-                            <input type="radio" name="q5" value="masvidal" data-correct>
-                            <span>Хорхе Масвидал</span>
+                            <input type="radio" name="q5" value="container" data-correct>
+                            <span>Используем &lt;div&gt; или &lt;span&gt; и навешиваем на них стили через CSS-класс</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q5" value="ngannou">
-                            <span>Франсис Нганну</span>
+                            <input type="radio" name="q5" value="b">
+                            <span>Используем &lt;b&gt; для жирного текста</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q5" value="lewis">
-                            <span>Деррик Льюис</span>
+                            <input type="radio" name="q5" value="font-face">
+                            <span>@font-face внутри CSS</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q5" value="holm">
-                            <span>Холли Холм</span>
+                            <input type="radio" name="q5" value="link">
+                            <span>&lt;link&gt; с подключением шрифта</span>
                         </label>
                     </div>
                 </section>
 
                 <section class="question" id="question-6">
-                    <h2 class="question__title">6. Кто был дисквалифицирован за запрещенное колено в 2021-м?</h2>
+                    <h2 class="question__title">6. Какой селектор применится только к первому элементу списка?</h2>
                     <div class="question__options">
                         <label class="answer">
-                            <input type="radio" name="q6" value="sterling">
-                            <span>Алджамейн Стерлинг</span>
+                            <input type="radio" name="q6" value="nth">
+                            <span>li:nth-child(odd)</span>
                         </label>
                         <label class="answer answer--correct">
-                            <input type="radio" name="q6" value="yan" data-correct>
-                            <span>Петр Ян</span>
+                            <input type="radio" name="q6" value="first" data-correct>
+                            <span>li:first-child</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q6" value="reeves">
-                            <span>Джим Миллер</span>
+                            <input type="radio" name="q6" value="last">
+                            <span>li:last-child</span>
                         </label>
                         <label class="answer">
-                            <input type="radio" name="q6" value="walker">
-                            <span>Джонни Уокер</span>
+                            <input type="radio" name="q6" value="all">
+                            <span>ul li</span>
                         </label>
                     </div>
                 </section>

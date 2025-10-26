@@ -31,7 +31,7 @@ body {
 }
 
 .quiz {
-    counter-reset: questions score;
+    counter-reset: score;
     width: min(640px, 100%);
     display: grid;
     gap: 18px;
@@ -60,7 +60,6 @@ body {
 }
 
 .question {
-    counter-increment: questions;
     border: 1px solid rgba(255, 255, 255, 0.85);
     border-radius: 12px;
     padding: 20px 18px;
@@ -148,7 +147,7 @@ body {
 }
 
 .quiz__score-value::after {
-    content: counter(score) " / " counter(questions);
+    content: counter(score) " из 6";
     font-variant-numeric: tabular-nums;
 }
 
@@ -191,24 +190,11 @@ body {
     background: var(--wrong-soft);
 }
 
-.quiz:has(#show-results:checked) .question:not([data-type="multi"]):has(input[data-correct]:checked) {
+.quiz:has(#show-results:checked) .question:has(input[data-correct]:checked) {
     border-color: var(--correct);
-}
-
-.quiz:has(#show-results:checked) .question:not([data-type="multi"]):has(input:checked):not(:has(input[data-correct]:checked)) {
-    border-color: var(--wrong);
-}
-
-.quiz:has(#show-results:checked) #question-4:has(input:checked) {
-    border-color: var(--wrong);
-}
-
-.quiz:has(#show-results:checked) #question-4:has(#q4-masvidal:checked):has(#q4-diaz:checked):not(:has(input:not([data-correct]):checked)) {
-    border-color: var(--correct);
-    background: var(--correct-soft);
-}
-
-.quiz:has(#show-results:checked) .question:not([data-type="multi"]):has(input[data-correct]:checked),
-.quiz:has(#show-results:checked) #question-4:has(#q4-masvidal:checked):has(#q4-diaz:checked):not(:has(input:not([data-correct]):checked)) {
     counter-increment: score;
+}
+
+.quiz:has(#show-results:checked) .question:has(input:checked):not(:has(input[data-correct]:checked)) {
+    border-color: var(--wrong);
 }
